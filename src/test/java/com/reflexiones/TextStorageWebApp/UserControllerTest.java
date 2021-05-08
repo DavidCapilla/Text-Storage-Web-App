@@ -8,12 +8,12 @@ public class UserControllerTest {
     private UserController testee;
 
     @Test
-    void registerUser_whenTheUsernameDoesNotExistInTheDatabase_thenTheUserIsAdded() {
+    void createAccount_whenTheUsernameDoesNotExistInTheDatabase_thenTheUserIsAdded() {
        fail();
     }
 
     @Test
-    void registerUser_whenTheUsernameAlreadyExistsInTheDatabase_thenAnErrorIsReturnedAndTheUserIsNotAdded() {
+    void createAccount_whenTheUsernameAlreadyExistsInTheDatabase_thenAnErrorIsReturnedAndTheUserIsNotAdded() {
         fail();
     }
 }

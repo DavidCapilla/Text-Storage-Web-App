@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    @PostMapping("/signin")
+    @PostMapping("/create_account")
     @ResponseBody
-    public SignInResponseCode registerUser(@RequestBody User user) {
+    public SignInResponseCode createAccount(@RequestBody User user) {
         //TODO: Implement sign in of the user to the database
         return SignInResponseCode.UNDEFINED;
     }
