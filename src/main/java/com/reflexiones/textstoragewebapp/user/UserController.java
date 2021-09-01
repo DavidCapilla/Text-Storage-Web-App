@@ -1,4 +1,4 @@
-package com.reflexiones.TextStorageWebApp;
+package com.reflexiones.textstoragewebapp.user;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

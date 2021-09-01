@@ -1,4 +1,4 @@
-package com.reflexiones.TextStorageWebApp;
+package com.reflexiones.textstoragewebapp;
 
 public enum SignInResponseCode {
     // TODO: Uncomment and delete UNDEFINED when implemented.
