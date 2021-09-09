@@ -1,4 +1,4 @@
-package com.reflexiones.textstoragewebapp;
+package com.reflexiones.text.storage;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class TextStorageWebAppApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TextStorageWebAppApplication.class, args);
 	}
-
 }

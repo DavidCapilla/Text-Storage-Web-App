@@ -1,6 +1,7 @@
-package com.reflexiones.textstoragewebapp;
+package com.reflexiones.text.storage.account.registration;
 
-public enum SignInResponseCode {
+public enum RegistrationResponseCode {
+
     // TODO: Uncomment and delete UNDEFINED when implemented.
     // USER_ADDED, USER_ALREADY_EXIST;
     UNDEFINED

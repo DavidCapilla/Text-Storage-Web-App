@@ -1,4 +1,4 @@
-package com.reflexiones.textstoragewebapp.user;
+package com.reflexiones.text.storage.user;
 
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

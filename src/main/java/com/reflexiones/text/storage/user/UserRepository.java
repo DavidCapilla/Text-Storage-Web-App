@@ -1,4 +1,4 @@
-package com.reflexiones.textstoragewebapp.user;
+package com.reflexiones.text.storage.user;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,5 +10,6 @@ import java.util.Optional;
 @Repository
 @Transactional(readOnly = true)
 public interface UserRepository extends JpaRepository<User, Long> {
+
     Optional<User> findByUsername(String username);
 }
