@@ -10,15 +10,15 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class UserService implements UserDetailsService {
 
-    private final static String USER_NOT_FOUND_MESSAGE =
-            "user with username %s not found";
+  private static final String USER_NOT_FOUND_MESSAGE = "user with username %s not found";
 
-    private final UserRepository userRepository;
+  private final UserRepository userRepository;
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return userRepository.findByUsername(username).orElseThrow(() ->
-                new UsernameNotFoundException(
-                        String.format(USER_NOT_FOUND_MESSAGE, username)));
-    }
+  @Override
+  public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    return userRepository
+        .findByUsername(username)
+        .orElseThrow(
+            () -> new UsernameNotFoundException(String.format(USER_NOT_FOUND_MESSAGE, username)));
+  }
 }

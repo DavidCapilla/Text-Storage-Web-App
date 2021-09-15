@@ -15,42 +15,42 @@ import java.util.Collections;
 @Entity
 public class User implements UserDetails {
 
-    @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
-    private Long id;
-    private String username;
-    private String password;
-    @Enumerated(EnumType.STRING)
-    private UserRole userRole;
-    private Boolean locked = false;
-    private Boolean enabled = false;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        SimpleGrantedAuthority authority =
-                new SimpleGrantedAuthority(userRole.name());
-        return Collections.singletonList(authority);
-    }
+  private String username;
+  private String password;
 
-    @Override
-    public boolean isAccountNonExpired() {
-        return false;
-    }
+  @Enumerated(EnumType.STRING)
+  private UserRole userRole;
 
-    @Override
-    public boolean isAccountNonLocked() {
-        return !locked;
-    }
+  private Boolean locked = false;
+  private Boolean enabled = false;
 
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
+  @Override
+  public Collection<? extends GrantedAuthority> getAuthorities() {
+    SimpleGrantedAuthority authority = new SimpleGrantedAuthority(userRole.name());
+    return Collections.singletonList(authority);
+  }
 
-    @Override
-    public boolean isEnabled() {
-        return enabled;
-    }
+  @Override
+  public boolean isAccountNonExpired() {
+    return false;
+  }
+
+  @Override
+  public boolean isAccountNonLocked() {
+    return !locked;
+  }
+
+  @Override
+  public boolean isCredentialsNonExpired() {
+    return true;
+  }
+
+  @Override
+  public boolean isEnabled() {
+    return enabled;
+  }
 }

@@ -11,13 +11,12 @@ import org.springframework.web.bind.annotation.*;
 @AllArgsConstructor
 public class RegistrationController {
 
-    @Autowired
-    private UserRepository userRepository;
+  @Autowired private UserRepository userRepository;
 
-    @PostMapping("/register")
-    @ResponseStatus(HttpStatus.CREATED)
-    public RegistrationResponseCode createAccount(@RequestBody RegistrationRequest request) {
-        //TODO: Implement sign up of the user to the database
-        return RegistrationResponseCode.UNDEFINED;
-    }
+  @PostMapping("/register")
+  @ResponseStatus(HttpStatus.CREATED)
+  public RegistrationResponseCode createAccount(@RequestBody RegistrationRequest request) {
+    // TODO: Implement sign up of the user to the database
+    return RegistrationResponseCode.UNDEFINED;
+  }
 }
