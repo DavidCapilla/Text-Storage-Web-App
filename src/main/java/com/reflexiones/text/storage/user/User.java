@@ -28,6 +28,11 @@ public class User implements UserDetails {
   private Boolean locked = false;
   private Boolean enabled = false;
 
+  public User(String username, String password) {
+    this.username = username;
+    this.password = password;
+  }
+
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {
     SimpleGrantedAuthority authority = new SimpleGrantedAuthority(userRole.name());
