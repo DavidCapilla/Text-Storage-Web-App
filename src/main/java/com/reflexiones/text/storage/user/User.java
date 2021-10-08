@@ -26,7 +26,7 @@ public class User implements UserDetails {
   private UserRole userRole;
 
   private Boolean locked = false;
-  private Boolean enabled = false;
+  private Boolean enabled = true;
 
   public User(String username, String password, UserRole userRole) {
     this.username = username;
