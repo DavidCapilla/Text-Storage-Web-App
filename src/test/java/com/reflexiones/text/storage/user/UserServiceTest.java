@@ -67,6 +67,6 @@ class UserServiceTest {
   }
 
   private User getUser() {
-    return new User(USERNAME, PASSWORD);
+    return new User(USERNAME, PASSWORD, UserRole.USER);
   }
 }

@@ -28,9 +28,10 @@ public class User implements UserDetails {
   private Boolean locked = false;
   private Boolean enabled = false;
 
-  public User(String username, String password) {
+  public User(String username, String password, UserRole userRole) {
     this.username = username;
     this.password = password;
+    this.userRole = userRole;
   }
 
   @Override

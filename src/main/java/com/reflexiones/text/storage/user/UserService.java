@@ -38,6 +38,7 @@ public class UserService implements UserDetailsService {
   }
 
   private User createUserWithEncodedPassword(User user) {
-    return new User(user.getUsername(), bCryptPasswordEncoder.encode(user.getPassword()));
+    return new User(
+        user.getUsername(), bCryptPasswordEncoder.encode(user.getPassword()), user.getUserRole());
   }
 }
