@@ -30,10 +30,8 @@ public class UserService implements UserDetailsService {
     if (userRepository.findByUsername(user.getUsername()).isPresent()) {
       return false;
     }
-
     User userWithEncodedPassword = createUserWithEncodedPassword(user);
     userRepository.save(userWithEncodedPassword);
-
     return true;
   }
 
