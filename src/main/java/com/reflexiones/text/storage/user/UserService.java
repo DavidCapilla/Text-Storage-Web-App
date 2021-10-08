@@ -18,6 +18,7 @@ public class UserService implements UserDetailsService {
 
   @Override
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
     return userRepository
         .findByUsername(username)
         .orElseThrow(
@@ -25,12 +26,18 @@ public class UserService implements UserDetailsService {
   }
 
   public boolean registerUser(User user) {
-    if (userRepository.findByUsername(user.getUsername()).isPresent())
+
+    if (userRepository.findByUsername(user.getUsername()).isPresent()) {
       return false;
+    }
 
-    user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+    User userWithEncodedPassword = createUserWithEncodedPassword(user);
+    userRepository.save(userWithEncodedPassword);
 
-    userRepository.save(user);
     return true;
+  }
+
+  private User createUserWithEncodedPassword(User user) {
+    return new User(user.getUsername(), bCryptPasswordEncoder.encode(user.getPassword()));
   }
 }
