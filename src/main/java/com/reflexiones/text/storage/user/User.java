@@ -25,7 +25,9 @@ public class User implements UserDetails {
   @Enumerated(EnumType.STRING)
   private UserRole userRole;
 
+  @Column(columnDefinition = "BOOLEAN")
   private Boolean locked = false;
+  @Column(columnDefinition = "BOOLEAN")
   private Boolean enabled = true;
 
   public User(String username, String password, UserRole userRole) {
