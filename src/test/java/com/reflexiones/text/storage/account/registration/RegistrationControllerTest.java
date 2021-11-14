@@ -36,4 +36,10 @@ class RegistrationControllerTest {
         testee.createAccount(new RegistrationRequest(USERNAME, PASSWORD));
     assertThat(response, is(RegistrationResponseCode.USER_ALREADY_EXIST));
   }
+
+  @Test
+  public void login_returnsTrue() {
+
+    assertThat(testee.login(), is(true));
+  }
 }
