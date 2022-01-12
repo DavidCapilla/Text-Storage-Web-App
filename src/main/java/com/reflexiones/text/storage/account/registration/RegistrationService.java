@@ -17,6 +17,6 @@ public class RegistrationService {
     return userService.registerUser(
             new User(request.getUsername(), request.getPassword(), UserRole.USER))
         ? RegistrationResponseCode.USER_CREATED
-        : RegistrationResponseCode.USER_ALREADY_EXIST;
+        : RegistrationResponseCode.USER_ALREADY_EXISTS;
   }
 }

@@ -37,6 +37,6 @@ class RegistrationServiceTest {
     when(userService.registerUser(any())).thenReturn(false);
     RegistrationResponseCode response =
         testee.registerUser(new RegistrationRequest(USERNAME, PASSWORD));
-    assertThat(response, is(RegistrationResponseCode.USER_ALREADY_EXIST));
+    assertThat(response, is(RegistrationResponseCode.USER_ALREADY_EXISTS));
   }
 }

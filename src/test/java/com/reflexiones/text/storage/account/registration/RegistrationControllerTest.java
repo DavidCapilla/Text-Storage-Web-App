@@ -31,10 +31,10 @@ class RegistrationControllerTest {
   @Test
   public void createAccount_whenTheUserExists_thenUserAlreadyExistsResponseCodeIsReturned() {
 
-    when(registrationService.registerUser(any())).thenReturn(RegistrationResponseCode.USER_ALREADY_EXIST);
+    when(registrationService.registerUser(any())).thenReturn(RegistrationResponseCode.USER_ALREADY_EXISTS);
     RegistrationResponseCode response =
         testee.createAccount(new RegistrationRequest(USERNAME, PASSWORD));
-    assertThat(response, is(RegistrationResponseCode.USER_ALREADY_EXIST));
+    assertThat(response, is(RegistrationResponseCode.USER_ALREADY_EXISTS));
   }
 
   @Test
