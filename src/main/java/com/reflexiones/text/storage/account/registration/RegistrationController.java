@@ -17,6 +17,7 @@ public class RegistrationController {
   private RegistrationService registrationService;
 
   @PostMapping("/register")
+  // TODO: Should we manage this annotation to not return created all the time?
   @ResponseStatus(HttpStatus.CREATED)
   public RegistrationResponseCode createAccount(@RequestBody RegistrationRequest request) {
     return registrationService.registerUser(request);
